@@ -1,28 +1,36 @@
-Clone the repository:
-git clone -b master git@github.com:NevenaU/blog.git
-cd blog
+Clone the repository: git clone -b master git@github.com:NevenaU/blog.git
+
+Enter the project directory: cd blog
 
 Build and start containers:
-command: docker-compose up -d --build
-command: docker-compose up -d
+build command: docker-compose up -d --build
+
+start command: docker-compose up -d
 
 
 
-docker-compose exec app bash
-Inside the app container:
+Get inside the app container: docker-compose exec app bash
 command: composer install
+
 command: php artisan migrate
+
 command: chown -R www-data:www-data storage bootstrap/cache
+
 command: chmod -R 775 storage bootstrap/cache
 
-docker-compose exec node bash
-Inside the node container:
-command: npm install
-command: npm run dev
+
+Get inside the app container: docker-compose exec node bash
+command install: npm install
+
+command runn: npm run dev
+
 
 
 cd src/storage/logs
+
+
 touch laravel.logs
+
 chown 777 /storage/logs/laravel.logs
 
 
