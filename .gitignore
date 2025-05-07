@@ -3,8 +3,6 @@
 /src/node_modules
 /src/public/storage
 /src/storage/*.key
-/src/.env
-/src/.env.*
 /src/phpunit.xml
 /src/phpunit.xml.dist
 /src/.idea
